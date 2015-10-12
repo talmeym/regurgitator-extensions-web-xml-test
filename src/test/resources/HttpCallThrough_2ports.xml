@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+							   xmlns:rgw="http://web.extensions.regurgitator.emarte.com"
+							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://web.extensions.regurgitator.emarte.com regurgitatorExtensionsWeb.xsd">
+	<rgw:http-call-through id="http-call-through-1" port="1234">
+		<rgw:host>something.com</rgw:host>
+		<rgw:port>1234</rgw:port>
+	</rgw:http-call-through>
+</rg:regurgitator-configuration>
