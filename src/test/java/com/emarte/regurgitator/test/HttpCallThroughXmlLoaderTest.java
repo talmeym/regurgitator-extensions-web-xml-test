@@ -20,28 +20,8 @@ public class HttpCallThroughXmlLoaderTest extends XmlBaseTest {
 	}
 
 	@Test
-	public void testMax() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/HttpCallThrough_max.xml", "com.emarte.regurgitator.extensions.web.HttpCallThrough:['http-call-through-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234],null]");
-	}
-
-	@Test
-	public void testMix() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/HttpCallThrough_mix.xml", "com.emarte.regurgitator.extensions.web.HttpCallThrough:['http-call-through-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234],null]");
-	}
-
-	@Test
 	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		ConfigurationFile.loadFile("classpath:/HttpCallThrough_mix.xml");
-	}
-
-	@Test(expected = RegurgitatorException.class)
-	public void testTwoHosts() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		toTest.load(getElement("classpath:/HttpCallThrough_2hosts.xml"), new HashSet<Object>());
-	}
-
-	@Test(expected = RegurgitatorException.class)
-	public void testTwoPorts() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		toTest.load(getElement("classpath:/HttpCallThrough_2ports.xml"), new HashSet<Object>());
+		ConfigurationFile.loadFile("classpath:/HttpCallThrough_min.xml");
 	}
 
 	private void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, DocumentException, IOException {
