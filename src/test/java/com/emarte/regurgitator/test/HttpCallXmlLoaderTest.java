@@ -16,7 +16,22 @@ public class HttpCallXmlLoaderTest extends XmlBaseTest {
 
 	@Test
 	public void testMin() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/HttpCall_min.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234],null]");
+		assertExpectation("classpath:/HttpCall_min.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234,null,null],null]");
+	}
+
+	@Test
+	public void testMax() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		assertExpectation("classpath:/HttpCall_max.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234,'username','password'],null]");
+	}
+
+	@Test(expected = RegurgitatorException.class)
+	public void testMissingUsername() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		toTest.load(getElement("classpath:/HttpCall_missingUsername.xml"), new HashSet<Object>());
+	}
+
+	@Test(expected = RegurgitatorException.class)
+	public void testMissingPassword() throws DocumentException, SAXException, IOException, RegurgitatorException {
+		toTest.load(getElement("classpath:/HttpCall_missingPassword.xml"), new HashSet<Object>());
 	}
 
 	@Test
