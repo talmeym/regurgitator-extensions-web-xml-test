@@ -1,18 +1,19 @@
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.*;
+import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.web.HttpCallXmlLoader;
 import org.dom4j.DocumentException;
 import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import java.io.IOException;
-import java.util.HashSet;
 
-import static junit.framework.Assert.assertEquals;
+import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
 
-public class HttpCallXmlLoaderTest extends XmlBaseTest {
-	private HttpCallXmlLoader toTest = new HttpCallXmlLoader();
+public class HttpCallXmlLoaderTest extends XmlLoaderTest {
+	public HttpCallXmlLoaderTest() {
+		super(new HttpCallXmlLoader());
+	}
 
 	@Test
 	public void testMin() throws DocumentException, SAXException, IOException, RegurgitatorException {
@@ -26,20 +27,16 @@ public class HttpCallXmlLoaderTest extends XmlBaseTest {
 
 	@Test(expected = RegurgitatorException.class)
 	public void testMissingUsername() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		toTest.load(getElement("classpath:/HttpCall_missingUsername.xml"), new HashSet<Object>());
+		loadFromFile("classpath:/HttpCall_missingUsername.xml");
 	}
 
 	@Test(expected = RegurgitatorException.class)
 	public void testMissingPassword() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		toTest.load(getElement("classpath:/HttpCall_missingPassword.xml"), new HashSet<Object>());
+		loadFromFile("classpath:/HttpCall_missingPassword.xml");
 	}
 
 	@Test
 	public void testFullLoad() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		ConfigurationFile.loadFile("classpath:/HttpCall_min.xml");
-	}
-
-	private void assertExpectation(String filePath, String expected) throws RegurgitatorException, SAXException, DocumentException, IOException {
-		assertEquals(expected, toTest.load(getElement(filePath), new HashSet<Object>()).toString());
+		loadFile("classpath:/HttpCall_min.xml");
 	}
 }
