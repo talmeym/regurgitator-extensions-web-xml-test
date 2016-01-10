@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   xmlns:rgc="http://common.regurgitator.emarte.com"
+		   xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+		   targetNamespace="http://stuff.test.regurgitator.emarte.com" elementFormDefault="qualified">
+
+	<xs:import schemaLocation="regurgitatorCommon.xsd" namespace="http://common.regurgitator.emarte.com"/>
+
+	<xs:complexType name="test">
+		<xs:attribute name="id" type="rgc:populated-string" use="optional"/>
+	</xs:complexType>
+	<xs:element name="test-value-builder" type="rgcct:test"/>
+	<xs:element name="test-value-builder-2" type="rgcct:test"/>
+	<xs:element name="test-value-validator" type="rgcct:test"/>
+	<xs:element name="test-value-validator-2" type="rgcct:test"/>
+	<xs:element name="test-step" type="rgcct:test"/>
+	<xs:element name="test-condition-behaviour" type="xs:string"/>
+	<xs:element name="test-rules-behaviour" type="xs:string"/>
+	<xs:element name="test-value-processor" type="rgcct:test"/>
+	<xs:element name="test-value-processor-2" type="rgcct:test"/>
+</xs:schema>
