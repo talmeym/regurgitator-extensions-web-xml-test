@@ -17,12 +17,12 @@ public class HttpCallXmlLoaderTest extends XmlLoaderTest {
 
 	@Test
 	public void testMin() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/HttpCall_min.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234,null,null],[]]");
+		assertExpectation("classpath:/HttpCall_min.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['something.com',1234,null,null]],[]]");
 	}
 
 	@Test
 	public void testMax() throws DocumentException, SAXException, IOException, RegurgitatorException {
-		assertExpectation("classpath:/HttpCall_max.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:['something.com',1234,'username','password'],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
+		assertExpectation("classpath:/HttpCall_max.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['something.com',1234,'username','password']],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
 	}
 
 	@Test(expected = RegurgitatorException.class)
