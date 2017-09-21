@@ -3,5 +3,5 @@
 							   xmlns:rgw="http://web.extensions.regurgitator.emarte.com"
 							   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 							   xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://web.extensions.regurgitator.emarte.com regurgitatorExtensionsWeb.xsd">
-	<rgw:file-response id="file-response-1" source="request-metadata:path-info" path-prefix="/assets"/>
+	<rgw:create-file-response id="create-file-response-1" source="request-metadata:path-info" path-prefix="/assets"/>
 </rg:regurgitator-configuration>
