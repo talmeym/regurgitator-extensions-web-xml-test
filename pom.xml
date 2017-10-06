@@ -10,10 +10,10 @@
     <packaging>jar</packaging>
     <name>Regurgitator Extensions Web Xml Test</name>
 
-	<properties>
-		<maven.compiler.source>1.6</maven.compiler.source>
-		<maven.compiler.target>1.6</maven.compiler.target>
-	</properties>
+    <properties>
+        <maven.compiler.source>1.6</maven.compiler.source>
+        <maven.compiler.target>1.6</maven.compiler.target>
+    </properties>
 
     <dependencies>
         <dependency>
