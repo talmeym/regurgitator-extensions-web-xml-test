@@ -4,11 +4,12 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.web.CreateFileResponseXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse_prefixed;
 
 public class CreateFileResponseXmlLoaderTest extends XmlLoaderTest {
     public CreateFileResponseXmlLoaderTest() {
@@ -17,16 +18,16 @@ public class CreateFileResponseXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/CreateFileResponse.xml", "com.emarte.regurgitator.extensions.web.CreateFileResponse:['create-file-response-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['request-metadata:path-info'],null],null]");
+        assertExpectation("classpath:/CreateFileResponse.xml", CreateFileResponse);
     }
 
     @Test
     public void testPrefixed() throws Exception {
-        assertExpectation("classpath:/CreateFileResponse_prefixed.xml", "com.emarte.regurgitator.extensions.web.CreateFileResponse:['create-file-response-1',com.emarte.regurgitator.core.ValueSource:[com.emarte.regurgitator.core.ContextLocation:['request-metadata:path-info'],null],'/assets']");
+        assertExpectation("classpath:/CreateFileResponse_prefixed.xml", CreateFileResponse_prefixed);
     }
 
     @Test
-    public void testFullLoadXml() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/CreateFileResponse_fullLoad.xml");
     }
 }

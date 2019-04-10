@@ -9,6 +9,8 @@ import com.emarte.regurgitator.extensions.web.HttpCallXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.HttpCall;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.HttpCall_max;
 
 public class HttpCallXmlLoaderTest extends XmlLoaderTest {
     public HttpCallXmlLoaderTest() {
@@ -16,13 +18,13 @@ public class HttpCallXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testMin() throws Exception {
-        assertExpectation("classpath:/HttpCall_min.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,null,null]],[]]");
+    public void testThis() throws Exception {
+        assertExpectation("classpath:/HttpCall_min.xml", HttpCall);
     }
 
     @Test
-    public void testMax() throws Exception {
-        assertExpectation("classpath:/HttpCall_max.xml", "com.emarte.regurgitator.extensions.web.HttpCall:['http-call-1',com.emarte.regurgitator.extensions.web.HttpMessageProxy:[com.emarte.regurgitator.extensions.web.HttpClientWrapper:['http','something.com',1234,'username','password']],[com.emarte.regurgitator.test.stuff.TestStep:['test-step-1'], com.emarte.regurgitator.test.stuff.TestStep:['test-step-2']]]");
+    public void testMaximum() throws Exception {
+        assertExpectation("classpath:/HttpCall_max.xml", HttpCall_max);
     }
 
     @Test(expected = RegurgitatorException.class)

@@ -4,11 +4,11 @@
  */
 package com.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.core.RegurgitatorException;
 import com.emarte.regurgitator.extensions.web.QueryParamProcessorXmlLoader;
 import org.junit.Test;
 
 import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.QueryParamProcessor;
 
 public class QueryParamProcessorXmlLoaderTest extends XmlLoaderTest {
     public QueryParamProcessorXmlLoaderTest() {
@@ -17,11 +17,11 @@ public class QueryParamProcessorXmlLoaderTest extends XmlLoaderTest {
 
     @Test
     public void testThis() throws Exception {
-        assertExpectation("classpath:/QueryParamProcessor.xml", "com.emarte.regurgitator.extensions.web.QueryParamProcessor:['value']");
+        assertExpectation("classpath:/QueryParamProcessor.xml", QueryParamProcessor);
     }
 
     @Test
-    public void testFullLoad() throws RegurgitatorException {
+    public void testFullLoad() throws Exception {
         loadFile("classpath:/QueryParamProcessor_fullLoad.xml");
     }
 }
