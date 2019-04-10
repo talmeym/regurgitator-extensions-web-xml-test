@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
+                               xmlns:rgw="http://web.extensions.regurgitator.emarte.com"
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
+                               xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://web.extensions.regurgitator.emarte.com regurgitatorExtensionsWeb.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+    <rgw:create-http-response id="create-http-response-1" value="value" status-code="200" content-type="contentType">
+        <rgcct:test-value-processor/>
+        <rgcct:test-value-processor/>
+    </rgw:create-http-response>
+</rg:regurgitator-configuration>

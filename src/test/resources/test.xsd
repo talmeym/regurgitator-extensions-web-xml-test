@@ -7,7 +7,7 @@
     <xs:import schemaLocation="regurgitatorCommon.xsd" namespace="http://common.regurgitator.emarte.com"/>
 
     <xs:complexType name="test">
-        <xs:attribute name="id" type="rgc:populated-string" use="optional"/>
+        <xs:attribute name="id" type="rgc:populated-string"/>
     </xs:complexType>
     <xs:element name="test-value-builder" type="rgcct:test"/>
     <xs:element name="test-value-builder-2" type="rgcct:test"/>
