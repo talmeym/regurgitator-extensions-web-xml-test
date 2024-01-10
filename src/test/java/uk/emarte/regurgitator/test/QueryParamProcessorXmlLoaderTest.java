@@ -4,8 +4,8 @@
  */
 package uk.emarte.regurgitator.test;
 
-import uk.emarte.regurgitator.extensions.web.QueryParamProcessorXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.web.QueryParamProcessorXmlLoader;
 
 import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
 import static uk.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.QueryParamProcessor;
