@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.com"
-                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-                               xmlns:rgw="http://web.extensions.regurgitator.emarte.com"
+<rg:regurgitator-configuration xmlns:rg="http://core.regurgitator.emarte.uk"
+                               xmlns:rgcct="http://stuff.test.regurgitator.emarte.uk"
+                               xmlns:rgw="http://web.extensions.regurgitator.emarte.uk"
                                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-                               xsi:schemaLocation="http://core.regurgitator.emarte.com regurgitatorCore.xsd http://web.extensions.regurgitator.emarte.com regurgitatorExtensionsWeb.xsd http://stuff.test.regurgitator.emarte.com test.xsd">
+                               xsi:schemaLocation="http://core.regurgitator.emarte.uk regurgitatorCore.xsd http://web.extensions.regurgitator.emarte.uk regurgitatorExtensionsWeb.xsd http://stuff.test.regurgitator.emarte.uk test.xsd">
     <rgw:http-call id="http-call-1" host="something.com" port="1234" username="username" password="password">
         <rgcct:test-step id="test-step-1"/>
         <rgcct:test-step id="test-step-2"/>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           xmlns:rgc="http://common.regurgitator.emarte.com"
-           xmlns:rgcct="http://stuff.test.regurgitator.emarte.com"
-           targetNamespace="http://stuff.test.regurgitator.emarte.com" elementFormDefault="qualified">
+           xmlns:rgc="http://common.regurgitator.emarte.uk"
+           xmlns:rgcct="http://stuff.test.regurgitator.emarte.uk"
+           targetNamespace="http://stuff.test.regurgitator.emarte.uk" elementFormDefault="qualified">
 
-    <xs:import schemaLocation="regurgitatorCommon.xsd" namespace="http://common.regurgitator.emarte.com"/>
+    <xs:import schemaLocation="regurgitatorCommon.xsd" namespace="http://common.regurgitator.emarte.uk"/>
 
     <xs:complexType name="test">
         <xs:attribute name="id" type="rgc:populated-string"/>

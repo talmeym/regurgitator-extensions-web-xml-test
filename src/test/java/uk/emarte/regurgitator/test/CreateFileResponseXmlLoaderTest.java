@@ -2,14 +2,14 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.test;
+package uk.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.extensions.web.CreateFileResponseXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.web.CreateFileResponseXmlLoader;
 
-import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse;
-import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse_prefixed;
+import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static uk.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse;
+import static uk.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.CreateFileResponse_prefixed;
 
 public class CreateFileResponseXmlLoaderTest extends XmlLoaderTest {
     public CreateFileResponseXmlLoaderTest() {
