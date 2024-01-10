@@ -2,13 +2,13 @@
  * Copyright (C) 2017 Miles Talmey.
  * Distributed under the MIT License (license terms are at http://opensource.org/licenses/MIT).
  */
-package com.emarte.regurgitator.test;
+package uk.emarte.regurgitator.test;
 
-import com.emarte.regurgitator.extensions.web.QueryParamProcessorXmlLoader;
 import org.junit.Test;
+import uk.emarte.regurgitator.extensions.web.QueryParamProcessorXmlLoader;
 
-import static com.emarte.regurgitator.core.ConfigurationFile.loadFile;
-import static com.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.QueryParamProcessor;
+import static uk.emarte.regurgitator.core.ConfigurationFile.loadFile;
+import static uk.emarte.regurgitator.test.WebExtensionsLoaderTestExpectations.QueryParamProcessor;
 
 public class QueryParamProcessorXmlLoaderTest extends XmlLoaderTest {
     public QueryParamProcessorXmlLoaderTest() {
