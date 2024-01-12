@@ -6,13 +6,13 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>uk.emarte.regurgitator</groupId>
     <artifactId>regurgitator-extensions-web-xml-test</artifactId>
-    <version>0.0.1</version>
+    <version>0.1.1</version>
     <packaging>jar</packaging>
     <name>Regurgitator Extensions Web Xml Test</name>
 
     <properties>
-        <maven.compiler.source>1.6</maven.compiler.source>
-        <maven.compiler.target>1.6</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -20,13 +20,13 @@
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
             <artifactId>regurgitator-test-common</artifactId>
-            <version>0.0.1</version>
+            <version>0.1.1</version>
         </dependency>
 
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
             <artifactId>regurgitator-extensions-web-xml</artifactId>
-            <version>0.0.1</version>
+            <version>0.1.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>uk.emarte.regurgitator</groupId>
@@ -38,7 +38,7 @@
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
             <artifactId>regurgitator-core-xml-test</artifactId>
-            <version>0.0.1</version>
+            <version>0.1.1</version>
             <exclusions>
                 <exclusion>
                     <groupId>uk.emarte.regurgitator</groupId>
