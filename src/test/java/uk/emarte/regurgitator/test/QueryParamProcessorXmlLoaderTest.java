@@ -16,7 +16,7 @@ public class QueryParamProcessorXmlLoaderTest extends XmlLoaderTest {
     }
 
     @Test
-    public void testThis() throws Exception {
+    public void testLoader() throws Exception {
         assertExpectation("classpath:/QueryParamProcessor.xml", QueryParamProcessor);
     }
 
