@@ -45,7 +45,7 @@
         <dependency>
             <groupId>uk.emarte.regurgitator</groupId>
             <artifactId>regurgitator-core-xml-test</artifactId>
-            <version>0.1.2</version>
+            <version>[0.1.2,0.2.0)</version>
             <exclusions>
                 <exclusion>
                     <groupId>uk.emarte.regurgitator</groupId>
